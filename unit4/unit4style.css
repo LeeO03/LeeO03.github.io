@@ -1,0 +1,17 @@
+html, body {
+  background-color:#f4d6ff;
+  height:100%;
+  width:80%;
+}
+
+main {background-color:#fbf0ff;}
+
+h1 {font-family:"Gerogia";color:#5d1d5d;background-color:#d3b4df;}
+
+h2 {font-family:"Monaco";color:purple;background-color:#f2dafb;}
+
+h3 {font-family:"Garmond";color:#993399;background-color:#f3e0fb;}
+
+p {font-family:"Arial";color:#500250;background-color:#fbf0ff;}
+
+footer {background-color:#f4d6ff;font-style:italic;}
