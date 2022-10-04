@@ -1,0 +1,39 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-image: url(/unit6/image/persona.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+img {
+  height:250px;
+}
+
+.imgh {
+  height:300px;
+}
+
+#wrapper {
+  width: 60%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+ul {
+  list-style-image: url(/unit6/image/meep.png);
+}
+
+main {
+  background-color:#febebc;
+  color:black;
+}
+
+#borderimg {
+  border: 10px solid transparent;
+  border-image-slice: 15;
+  border-image-width: 10px;
+  border-image-repeat: round round;
+  border-image-source: url(/unit6/image/bg.gif);
+  border-style: solid;
+}
