@@ -12,6 +12,7 @@ body{
   font-size:1.25em;
   background-color:white;
   color:black;
+  margin: 0% 5%;
 }
 
   a::after{
