@@ -1,0 +1,9 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+option {padding: 2px;}
+.scroll {overflow-y: scroll;}
+.size {width: 80%}
+.left {padding-left: 5%;}
