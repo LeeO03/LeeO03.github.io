@@ -1,0 +1,23 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+table {border: 1px solid; width: 100%;}
+th {border-bottom: 1px solid; text-align: left;}
+.even tr:nth-child(even) {background-color:#d6d6d6;}
+.odd tr:nth-child(odd) {background-color:#d6d6d6;}
+.center {margin: auto; width:65%;}
+
+a {text-decoration: none;}
+a:link {color: black;}
+a:visited {color: black;}
+a:hover {color: hotpink;}
+
+#ingred {width: 200px; height: 200px;}
+
+option {padding: 2px; margin: 0px 12px 0px 5px;}
+.scroll {overflow-y: scroll;}
+.size {width: 80%}
+.left {padding-left: 5%;}
+.oneline {display:inline;}

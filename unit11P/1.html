@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>My Github Website</title>
+  <link href="/unit11P/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="left">
+  <h1 class="oneline">Form Survey</h1> <input type="image" src="button.png" alt=";)"> <br> <br>
+  <form action="https://webdevbasics.net/scripts/demo.php" method="post">
+    <label for="usern">Username:</label> <br>
+    <input type="text" id="usern" name="usern" maxlength="30"> <br>
+    <br>
+    <fieldset class="size">
+      <legend>Select Your Favorite Month:</legend>
+      <input type="radio" id="jan" name="month" value="January">
+      <label for="jan">January</label><br>
+      <input type="radio" id="feb" name="month" value="February">
+      <label for="feb">February</label><br>
+      <input type="radio" id="mar" name="month" value="March">
+      <label for="mar">March</label><br>
+      <input type="radio" id="apr" name="month" value="April">
+      <label for="apr">April</label><br>
+      <input type="radio" id="may" name="month" value="May">
+      <label for="may">May</label><br>
+      <input type="radio" id="jun" name="month" value="June">
+      <label for="jun">June</label><br>
+      <input type="radio" id="jul" name="month" value="July">
+      <label for="jul">July</label><br>
+      <input type="radio" id="aug" name="month" value="August">
+      <label for="aug">August</label><br>
+      <input type="radio" id="sept" name="month" value="September">
+      <label for="sept">September</label><br>
+      <input type="radio" id="oct" name="month" value="October">
+      <label for="oct">October</label><br>
+      <input type="radio" id="nov" name="month" value="November">
+      <label for="nov">Novemeber</label><br>
+      <input type="radio" id="dec" name="month" value="December">
+      <label for="dec">Decemeber</label><br>
+    </fieldset><br>
+    <div>
+      <label for="sm_site">Select Your Favorite Social Media Site:</label><br>
+      <select size="3" name="sm_site" class="scroll">
+        <option value="1" selected>Facebook</option>
+        <option value="2">Youtube</option>
+        <option value="3">WhatsApp</option>
+        <option value="4">Instagram</option>
+        <option value="5">TikTok</option>
+        <option value="6">Snapchat</option>
+        <option value="7">Twitter</option>
+        <option value="8">Reddit</option>
+        <option value="9">Quora</option>
+        <option value="10">Skype</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <fieldset class="size">
+        <legend>Shipping Address:</legend>
+        <label for="ad1">Adress Line 1:</label> <br>
+        <input type="text" id="ad1" name="ad1"> <br>
+        <label for="ad2">Adress Line 2:</label> <br>
+        <input type="text" id="ad2" name="ad2"> <br>
+        <label for="city">City:</label> <br>
+        <input type="text" id="city" name="city"> <br>
+        <label for="state">State:</label> <br>
+        <input type="text" id="state" name="state"> <br>
+        <label for="zip">Zip:</label> <br>
+        <input type="text" id="zip" name="zip"> <br>
+      </fieldset>
+    </div> <br>
+    <input type="submit" value="Submit">
+    <input type="reset"> <br> <br>
+    <input type="hidden" id="userid" name="userid">
+    <input type="password" id="pword" name="pword">
+    <!-- A hidden input control with the name userid
+    A password box form control with the name pword -->
+  </form> <br> 
+  <a href="/unit11P/index.html">Project 11 Home Page</a> <br>
+  <a href="/index.html">GitHub Home Page</a>
+</div><br>
+</body>
+
+</html>
