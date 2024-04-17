@@ -1,4 +1,330 @@
-html, body {
-  height: 100%;
-  width: 100%;
+/*screaming and crying and riding the cyclone*/
+/*(go back through and add comments explaining the code when done!!!)*/
+body {
+  margin: 0px;
+  font-family: sans-serif;
+  color: black;
+  background-color: #9579be;}
+
+/*coloring elements (mostly navbar):*/
+nav p:hover {background-color: #af79be;}
+#active {background-color: #9579be;}
+#active:hover {background-color: #af79be;}
+.name:hover {background-color: #dfb8ea;}
+.bg-recolor {background-color: #dfb8ea;}
+
+/*navbar and links:*/
+.nav {
+  text-align: right;
+  padding: 0px;
+  background-color: #dfb8ea;
+  /*makes nav stick to top when scrolling:*/
+  position: sticky;
+  top: 0px;}
+nav {
+  padding-top: 0px;
+  padding-bottom: 10px;}
+nav p {
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding: 8px;
+  background-color: #fefaff;}
+.name {
+  display: inline;
+  text-align: left;
+  float: left;
+  font-size: 28px;
+  margin: 0px;
+  padding-top: 0px;
+  background-color: #dfb8ea;}
+
+/*affects all links:*/
+a {
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;}
+/*affects links in navbar:*/
+nav p a:hover {
+  font-weight: bold;
+  text-decoration: none;}
+.hp-link {text-transform: lowercase;}
+.hp-link:hover {color: hotpink;}
+/*changes link style from the default:*/
+div.link {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1.2;}
+div.link p a:hover {color: hotpink;}
+
+/*heading styles:*/
+h1 { /*used for page names*/
+  text-align: center;
+  font-size: 60px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  vertical-align: bottom;}
+h2 { /*used for icon text on contact page*/
+  text-align: left;
+  font-size: 40px;
+  display: inline;}
+h3 { /*used for subheadings*/
+  text-align: center;
+  margin: 0px;
+  padding: 4px;
+  font-size: 20px;
+  background-color: #9579be;
+  color: black;
+  text-transform: uppercase;}
+h4 { /*currently only used in fieldset "Your Contact Information:"*/
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
+
+/*image classes:*/
+.home-img {
+  max-width: 30%;
+  height: auto;
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 5px;}
+.icon { /*used for contact icons*/
+  text-align: center;
+  width: 10%;
+  vertical-align: middle;
+  display: inline;
+  margin-bottom: 10px;}
+.img-line { /*used on the home page*/
+  max-width: 30%;
+  height: auto;
+  display: inline;
+  margin-right: 20px;
+  margin-bottom: 5px;}
+.img-line-2 {
+  width: 45%;
+  height: auto;
+  display: inline;
+  margin-right: 20px;
+  margin-bottom: 5px;}
+.full-img {
+  max-width: 100%;
+  height: auto;}
+.left-img {
+  max-width: 40%;
+  height: auto;
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;}
+.left-img-text {text-align: left;}
+.nav-logo {
+  height: 60px;
+  display: inline;
+  position: inline;
+  vertical-align: top;}
+
+/*form styles:*/
+.input {
+  line-height: 1.5;
+  text-align: left;
+  width: 98%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: none;}
+fieldset {
+  text-align: left;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #dfb8ea;
+  border: none;}
+
+/*tiny fixes for smaller screens:*/
+@media (max-width: 991px) {
+  .name {
+    display: block;
+    text-align: center;
+    float: none;}
+  .nav {text-align: center;}
+  nav {margin-bottom: 5px;}
+  .home-img {
+  max-width: 100%;
+  display: block;}
+  .left-img {
+    max-width: 100%;
+    display: block;}
+  .left-img-text {text-align: center;}
+  div.link {min-height: 30px;}
+  .img-line {max-width: 40%}
+  fieldset {width: 95%;}
+  #center {
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;}
+}
+/*fixes the spacing in my message on the home page:*/
+@media (min-width: 992px) {div.link {min-height: 90px;}}
+@media (max-width: 576px) {h2 {font-size: 30px;}}
+@media (max-width: 412px) {h2 {font-size: 20px;}}
+
+/* .collapse {
+  max-height: 45px;
+  overflow: hidden;
+  transition: all 0.5s linear 0s;}
+.open {max-height: 999px;}*/
+
+/*affects the button that is used to open and close the collapsible tabs in samples and art */
+.collapsible {
+  /*changes the cursor so ppl know to click*/
+  cursor: pointer;
+  padding: 4px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #af79be;;
+  color: black;}
+/* .active, .collapsible:hover {background-color: #9579be;} */
+/* affects collapsed content, hidden by default */
+.sample-item {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;}
+.collapsible:after {
+  color: black; /*this doesn't work bc it is determined by the browser :dies:*/
+  content: "\02795"; /* Unicode for (+) */
+  font-size: 13px;
+  float: right;
+  margin-top: 2px;
+  margin-right: 15px;}
+.active:after {
+  content: "\2796"; /* Unicode for (-) */}
+
+/*main content:*/
+/*turned div into .div temporarily, it is affecting lightbox*/
+div {
+  text-align: left;
+  padding: 5px;
+  background-color: #fefaff;}
+.main {
+  min-height: 100vh;
+  padding: 10px;}
+.footer {text-align: center;}
+.lb-color-override {background-color: #dacfdd;}
+
+
+/*used to center divs:*/
+.center {text-align: center;}
+#center {
+  width: 60%;
+  margin-left: 25%;
+  margin-right: 15%;}
+.float-left {float: left;}
+.float-right {float: right;}
+
+/*will float left w/o this:*/
+.container {
+  max-width: 100%;
+  padding: 0px 10px;
+  margin-left: auto;
+  margin-right: auto;}
+@media (min-width: 576px) {.container {max-width: 540px;}}
+@media (min-width: 768px) {.container {max-width: 720px;}}
+@media (min-width: 992px) {.container {max-width: 960px;}}
+@media (min-width: 1200px) {.container {max-width: 1140px;}}
+
+/*column grid layout:*/
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.col-xl-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+.col-xl-1 {
+  -ms-flex: 0 0 8.333333%;
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+.col-xl-2 {
+  -ms-flex: 0 0 16.666667%;
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+.col-xl-3 {
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-xl-4 {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.col-xl-5 {
+  -ms-flex: 0 0 41.666667%;
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+.col-xl-6 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-xl-7 {
+  -ms-flex: 0 0 58.333333%;
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+.col-xl-8 {
+  -ms-flex: 0 0 66.666667%;
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+.col-xl-9 {
+  -ms-flex: 0 0 75%;
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-xl-10 {
+  -ms-flex: 0 0 83.333333%;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+.col-xl-11 {
+  -ms-flex: 0 0 91.666667%;
+  flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+.col-xl-12 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+
+.k-bg {background-color: black;}
+/* figure {
+  display: inline-block;
+}
+figurecaption {
+  text-align: center;
+  display: inline-block;
+} */

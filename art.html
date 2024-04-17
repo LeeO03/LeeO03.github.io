@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lee White - Personal Art</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="script.js" rel="script" type="text/js" />
+</head>
+
+<body>
+  <!--navbar-->
+  <div class="container center nav">
+    <div class="col-xl-12 nav"><br>
+      <nav>
+        <p class="name">Lee White - Portfolio</p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="samples.html">Work Samples</a></p>
+        <p><a href="resume.html">Resume</a></p>
+        <p id="active"><a href="art.html">Personal Art</a></p>
+      </nav>
+    </div>
+
+    <!--START OF ART SPECIFIC CONTENT-->
+    <div class="col-xl-12 main">
+      <h1><a name="top"></a><img src="image/web-logo.png" class="nav-logo" />Personal Art<img src="image/web-logo-2.png"
+          class="nav-logo" /></h1>
+      <h3>Project Navigator</h3> <br>
+      <!--Photoshop-->
+      <button type="button" class="collapsible">Photoshop</button>
+        <div class="sample-item">
+          <br>
+          <div class="center link">
+            <img src="image/credly.jpg" class="img-line-2" />
+            <img src="image/mos-associate.jpg" class="img-line-2" />
+            <img src="image/mos-3place.jpg" class="img-line-2" />
+            <img src="image/credly.jpg" class="img-line-2" />
+            <img src="image/mos-associate.jpg" class="img-line-2" />
+            <img src="image/mos-3place.jpg" class="img-line-2" />
+            <img src="image/credly.jpg" class="img-line-2" />
+            <img src="image/mos-associate.jpg" class="img-line-2" />
+            <img src="image/mos-3place.jpg" class="img-line-2" />
+            <p><a href="#top">Back to Top</a></p><br>
+          </div>
+        </div>
+
+      <!--Illustrator-->
+      <button type="button" class="collapsible">Illustrator</button>
+      <div class="sample-item"> <br>
+        <div class="center link">
+          <img src="image/credly.jpg" class="img-line-2" />
+          <img src="image/mos-associate.jpg" class="img-line-2" />
+          <img src="image/mos-3place.jpg" class="img-line-2" />
+          <img src="image/credly.jpg" class="img-line-2" />
+          <img src="image/mos-associate.jpg" class="img-line-2" />
+          <img src="image/mos-3place.jpg" class="img-line-2" />
+          <img src="image/credly.jpg" class="img-line-2" />
+          <img src="image/mos-associate.jpg" class="img-line-2" />
+          <img src="image/mos-3place.jpg" class="img-line-2" />
+          <p><a href="#top">Back to Top</a></p><br>
+        </div>
+      </div>
+      <!--Indesign-->
+      <button type="button" class="collapsible">Indesign</button>
+      <div class="sample-item"> <br>
+        <div class="center link">
+          <img src="image/credly.jpg" class="img-line-2" />
+          <img src="image/mos-associate.jpg" class="img-line-2" />
+          <img src="image/mos-3place.jpg" class="img-line-2" />
+          <img src="image/credly.jpg" class="img-line-2" />
+          <img src="image/mos-associate.jpg" class="img-line-2" />
+          <img src="image/mos-3place.jpg" class="img-line-2" />
+          <img src="image/credly.jpg" class="img-line-2" />
+          <img src="image/mos-associate.jpg" class="img-line-2" />
+          <img src="image/mos-3place.jpg" class="img-line-2" />
+          <p><a href="#top">Back to Top</a></p><br>
+        </div>
+      </div>
+      </div>
+    <!--END OF ART SPECIFIC CONTENT-->
+
+    <!--footer-->
+    <div class=" col-xl-12 footer bg-recolor">
+      <p>Website Designed by Lee White &copy;2024</p>
+    </div>
+  </div>
+</body>
+
+  <script> //closes collapsible tabs in samples and art (can't be in .js bc open is there)
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+  
+</html>

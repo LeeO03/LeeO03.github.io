@@ -1,0 +1,215 @@
+/* downloaded the lightbox js library from https://lokeshdhakar.com/projects/lightbox2/#browser-support */
+body.lb-disable-scrolling {
+  overflow: hidden;
+  /* (reference says this might be needed for ios)
+  position: fixed;
+  height: 100vh;
+  width: 100vw; */}
+
+.lightboxOverlay {
+  max-width: 100%;
+  overflow-x: hidden;
+  /*^^ test code to remove right side of lightbox*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9998; /*ensures this is at the very back*/
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;}
+
+.lightbox {
+  /* testing if setting padding to 0px will allow .div to be div */
+  padding: 0px !important;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  outline: none;
+  background-color: #dacfdd;}
+  /* background: none; */
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+  border: 4px solid #dacfdd;}
+
+.lightbox a img {border: none;}
+
+.lb-outerContainer {
+  /* position: relative; */
+  /* *zoom: 1; */
+  width: 250px;
+  height: 250px; 
+  margin: 0 auto;
+  border-radius: 4px;
+  /* Background color behind image. This is visible during transitions. */
+  background-color: #dacfdd;}
+
+/*space at top when new image is loading*/
+/* .lb-outerContainer:after {
+  content: "@";
+  display: table;
+  clear: both;} */
+
+/*makes the loading gif stay in its position*/
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 24.8%;
+  height: 25%;
+  width: 50%;
+  text-align: center;
+  line-height: 0;}
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background-color: #dacfdd;
+  background: url(../images/loading.gif) no-repeat;}
+
+/*MANIPULATING THIS AFFECTS THE ACTUAL IMAGE*/
+.lb-nav {
+  float: right;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10
+  background-color: #dacfdd;}
+/* .lb-nav {
+  position: absolute;
+  margin-top: auto;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;} */
+
+.lb-container > .nav {
+  background-color: #dacfdd;
+  left: 0;}
+
+/* .lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');} */
+
+/* .lb-prev, .lb-next {
+  z-index: 9999;
+  float: left;
+  height: 80%;
+  max-width: 80%;
+  padding: 0px;
+  margin: 0px;
+  cursor: pointer;
+  display: relative;} */
+.lb-next,
+.lb-prev {
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  cursor: pointer;
+  display: block}
+
+/*left arrow icon*/
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../images/prev.png) left 48% no-repeat;
+  /*hides arrow until hovered over*/
+  /* filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; */
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;}
+/* .lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;} */
+
+/*right arrow icon*/
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../images/next.png) right 48% no-repeat;
+  /*hides arrow until hovered over*/
+  /* filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; */
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;}
+/* .lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;} */
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  /*made for internet explorer 6 and 7, consider removing if issues occur*/
+  /* *zoom: 1; */
+  width: 100%;}
+  /* border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; */
+
+/*space after image number caption*/
+/* .lb-dataContainer:after {
+  content: "#";
+  display: table;
+  clear: both;} */
+
+/*image caption page # of #*/
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;}
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  /* line-height: 1.1em; */
+}
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  /* line-height: 1em; */
+}
+.lb-data .lb-caption a {color: #4ae;}
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;}
+
+/*close icon*/
+.lb-data .lb-close {
+  z-index: 10001;
+  margin-top: 0px;
+  padding-top: 0px;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../images/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;}
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;}
