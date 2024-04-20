@@ -89,7 +89,7 @@ html.lb-disable-scrolling {
   width: 32px;
   height: 32px;
   margin: 0 auto;
-  /* background: url(../../dist/images/loading.gif) no-repeat; */ /* this image doesn't exist in the zip I was given?*/
+  /* background: url(../../dist/images/loading.gif) no-repeat; */
 }
 
 .lb-nav {
