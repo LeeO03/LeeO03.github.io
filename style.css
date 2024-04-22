@@ -101,18 +101,22 @@ h4 { /*currently only used in fieldset "Your Contact Information:"*/
   vertical-align: middle;
   display: inline;
   margin-bottom: 10px;}
-.img-line { /*used on the home page*/
+.img-line { /*used to make lines of images with 3 side by side*/
   max-width: 30%;
   height: auto;
   display: inline;
   margin-right: 20px;
-  margin-bottom: 5px;}
-.img-line-2 {
+  margin-bottom: 5px;
+  text-align: center;
+  vertical-align: top;}
+.img-line-2 { /*used to make lines of images with 2 side by side*/
   width: 45%;
   height: auto;
   display: inline;
-  margin-right: 20px;
-  margin-bottom: 5px;}
+  /* margin-right: 20px; */
+  margin-bottom: 5px;
+  text-align: center;
+  vertical-align: top;}
 .full-img {
   max-width: 100%;
   height: auto;}
@@ -124,11 +128,16 @@ h4 { /*currently only used in fieldset "Your Contact Information:"*/
   margin-right: 20px;
   margin-bottom: 20px;}
 .left-img-text {text-align: left;}
-.nav-logo {
-  height: 60px;
+.img-midline {
+  height: 22px;
+  margin: 0px;
   display: inline;
-  position: inline;
   vertical-align: top;}
+.nav-logo {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
 
 /*form styles:*/
 .input {
@@ -180,13 +189,13 @@ fieldset {
   overflow: hidden;
   transition: all 0.5s linear 0s;}
 .open {max-height: 999px;}*/
-
 /*affects the button that is used to open and close the collapsible tabs in samples and art */
 .collapsible {
   /*changes the cursor so ppl know to click*/
   cursor: pointer;
   padding: 4px;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 100%;
   text-align: center;
   border: none;
@@ -199,7 +208,8 @@ fieldset {
 .sample-item {
   padding: 0 18px;
   background-color: white;
-  max-height: 0;
+  /*max-height: 0; to make the items hidden*/
+  max-height: 105px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;}
 .collapsible:after {
