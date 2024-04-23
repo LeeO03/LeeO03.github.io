@@ -1,5 +1,10 @@
 /*screaming and crying and riding the cyclone*/
 /*(go back through and add comments explaining the code when done!!!)*/
+@font-face {
+  font-family: 'Stopbuck';
+  src: url("pagetitle/Stopbuck.ttf");}
+@import url(pagetitle/Stopbuck.ttf);
+
 body {
   margin: 0px;
   font-family: sans-serif;
@@ -31,10 +36,14 @@ nav p {
   padding: 8px;
   background-color: #fefaff;}
 .name {
+  font-family: 'Stopbuck' !important;
+  font-variant: small-caps;
+  color: #fefaff;
+  text-shadow: 3px 3px #9579be;
   display: inline;
   text-align: left;
   float: left;
-  font-size: 28px;
+  font-size: 32px;
   margin: 0px;
   padding-top: 0px;
   background-color: #dfb8ea;}
