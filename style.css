@@ -80,6 +80,7 @@ h1 { /*used for page names*/
 h2 { /*used for icon text on contact page*/
   text-align: left;
   font-size: 40px;
+  color: #fefaff;;
   display: inline;}
 h3 { /*used for subheadings*/
   text-align: center;
@@ -87,7 +88,7 @@ h3 { /*used for subheadings*/
   padding: 4px;
   font-size: 20px;
   background-color: #9579be;
-  color: black;
+  color: #fefaff;;
   text-transform: uppercase;}
 h4 { /*currently only used in fieldset "Your Contact Information:"*/
   text-align: center;
@@ -211,12 +212,12 @@ fieldset {
   font-size: 20px;
   font-weight: bold;
   background-color: #af79be;;
-  color: black;}
+  color: #fefaff;;}
 /* .active, .collapsible:hover {background-color: #9579be;} */
 /* affects collapsed content, hidden by default */
 .sample-item {
   padding: 0 18px;
-  background-color: white;
+  background-color: #fefaff;;
   /*max-height: 0; to make the items hidden*/
   max-height: 105px;
   overflow: hidden;
