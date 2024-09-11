@@ -14,6 +14,7 @@ body {
 /*coloring elements (mostly navbar):*/
 nav p:hover {background-color: #af79be;}
 #active {background-color: #9579be;}
+
 #active:hover {background-color: #af79be;}
 .name:hover {background-color: #dfb8ea;}
 .bg-recolor {background-color: #dfb8ea;}
@@ -97,6 +98,10 @@ h4 { /*currently only used in fieldset "Your Contact Information:"*/
   margin-top: 10px;
   margin-bottom: 5px;
 }
+
+/*image no download on phone (hopefully)*/
+img {
+  -webkit-touch-callout:none;}
 
 /*image classes:*/
 .home-img {
