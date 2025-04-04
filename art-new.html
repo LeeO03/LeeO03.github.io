@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>LeekTree - Art 2025</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="dist/css/lightbox.css" rel="stylesheet" />
+  <!--js library for lightboxes-->
+  <script src="dist/js/lightbox-plus-jquery.js"></script>
+  <script src="rightclick.js"></script>
+</head>
+
+<body>
+  <!--navbar-->
+  <div class="container center nav">
+    <div class="col-xl-12 nav"><br>
+      <nav>
+        <p class="name">LeekTree - Portfolio</p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="contact.html">Contact</a></p>
+        <p><a href="samples.html">Work Samples</a></p>
+        <!-- <p><a href="resume.html">Resume</a></p> -->
+        <p><a href="art.html">Art 2018</a></p>
+        <p id="active"><a href="art-new.html">Art 2025</a></p>
+      </nav>
+    </div>
+
+    <!--START OF ART SPECIFIC CONTENT-->
+    <div class="col-xl-12 main">
+      <img src="pagetitle/PA.png" class="nav-logo" />
+      <!-- <h1><a name="top"></a><img src="image/web-logo.png" class="nav-logo" />Personal Art<img src="image/web-logo-2.png" class="nav-logo" /></h1> -->
+      <h3 name="top">Art Navigator</h3> <br>
+      <div class="center">
+      <p>The art shown below is organized by type: Game Design (TTRPG/TCG), Animation (2D), and more to come. Each created in <b>2025</b> and onward.</p>
+        <p>Feel free to open and close the sections as well as clicking on images to single them out! If a section only partially loads, consider closing then reopening it.</p>
+      </div>
+      <!--TTRPG/CARD-->
+      <button type="button" class="collapsible">Game Designs</button>
+      <div class="sample-item">
+        <br>
+        <div class="center link">
+          <a href="" data-lightbox="sitv"><img src="" alt="" class="img-line-2" /></a>
+          <a href="" data-lightbox="sitv"><img src="" alt="" class="img-line-2" /></a>
+          <a href="" data-lightbox="sitv"><img src="" alt="" class="img-line-2" /></a>
+          <a href="" data-lightbox="sitv"><img src="" alt="" class="img-line-2" /></a>
+          <a href="" data-lightbox="sitv"><img src="" alt="" class="img-line-2" /></a>
+          <a href="" data-lightbox="guildQuest"><img src="" alt="" class="img-line" /></a>
+          <a href="" data-lightbox="other1"><img src="" alt="" class="img-line" /></a>
+          <a href="" data-lightbox="other2"><img src="" alt="" class="img-line-2" /></a>
+          <!-- <a href="AA" data-lightbox="msp"><img src="AA" alt="" class="img-line-2" /></a>
+          <a href="BB" data-lightbox="msp"><img src="BB" alt="" class="img-line-2" /></a> -->
+          <p><a href="#top">Back to Top</a></p><br>
+        </div>
+      </div><br>
+      <!--Animation-->
+      <button type="button" class="collapsible">Animation</button>
+      <div class="sample-item">
+        <br>
+        <div class="center link">
+          <a href="" data-lightbox="sunkissed"><img src="" alt="" class="img-line-2" /></a>
+          <a href="" data-lightbox="other"><img src="" alt="" class="img-line" /></a>
+          <!-- <a href="AA" data-lightbox="canvas"><img src="AA" alt="" class="img-line-2" /></a>
+          <a href="BB" data-lightbox="canvas"><img src="BB" alt="" class="img-line-2" /></a> -->
+          <p><a href="#top">Back to Top</a></p><br>
+        </div>
+      </div><br>
+      <!--General Art-->
+      <button type="button" class="collapsible">General Art</button>
+      <div class="sample-item">
+        <br>
+        <div class="center link">
+          <a href="art-new/2.20.25shera.png" data-lightbox="sheRa" title="She-Ra Poster"><img src="art-new/2.20.25shera.png" alt="She-Ra Poster" class="img-line-2" /></a>
+          <a href="art-new/12.29.24sulfur-magenta-azure.png" data-lightbox="random" title="Anime Fan Art"><img src="art-new/12.29.24sulfur-magenta-azure.png" alt="Anime Fan Art" class="img-line-2" /></a>
+          <a href="art-new/1.3.25blueboy.png" data-lightbox="random" title="Random Character Design"><img src="art-new/1.3.25blueboy.png" alt="Random Character Design" class="img-line-2" /></a>
+          <!-- <a href="AA" data-lightbox="canvas"><img src="AA" alt="" class="img-line-2" /></a>
+          <a href="BB" data-lightbox="canvas"><img src="BB" alt="" class="img-line-2" /></a> -->
+          <p><a href="#top">Back to Top</a></p><br>
+        </div>
+      </div><br>
+    <!--END OF ART SPECIFIC CONTENT-->
+
+    <!--footer-->
+    <div class=" col-xl-12 footer bg-recolor">
+      <p>Website Designed by LeekTree &copy;2025</p>
+    </div>
+  </div>
+</body>
+
+  <script>
+    // allows the lightbox to reset to the first image if the user continues to click forward on the last image
+    lightbox.option({
+    'wrapAround': true})
+  </script>
+  <!--closes collapsible tabs in samples and art (can't be in .js bc open is there)-->
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+  
+</html>

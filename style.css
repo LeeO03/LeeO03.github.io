@@ -39,6 +39,7 @@ nav p {
 .name {
   font-family: 'Stopbuck' !important;
   font-variant: small-caps;
+  letter-spacing: 5px;
   color: #fefaff;
   text-shadow: 3px 3px #9579be;
   display: inline;
