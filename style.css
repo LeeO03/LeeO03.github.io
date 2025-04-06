@@ -1,5 +1,11 @@
 /*screaming and crying and riding the cyclone*/
 /*(go back through and add comments explaining the code when done!!!)*/
+
+/* VIDEO TEST  hide video but later hide image to show video, tricking lightbox???*/
+.replacerVideo {
+  display: none;
+}
+
 @font-face {
   font-family: 'Stopbuck';
   src: url("pagetitle/Stopbuck.ttf");}

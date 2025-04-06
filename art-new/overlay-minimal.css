@@ -1,0 +1,42 @@
+/* the overlayed element */
+#voverlay {
+
+  /* growing background image */
+  background-image:url(back.png);
+
+  /* dimensions after the growing animation finishes  */
+  /* width:640px;
+  height:360px; */
+
+  /* initially overlay is hidden */
+  display:none;
+
+  /* some padding to layout nested elements nicely  */
+  padding:10px;
+}
+
+/* default close button positioned on upper right corner */
+#voverlay .close {
+  background-image:url(../dist/images/close.png);
+  position:absolute;
+  right:-20px;
+  top:-20px;
+  cursor:pointer;
+  height:40px;
+  width:40px;
+}
+/* #voverlay .close:hover{
+  background-image:url(close_hover.png);
+} */
+
+#voverlay .vcontainer{
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;	
+  background:url(../dist/images/loading.gif) no-repeat 50% 50%;
+}
+
+#voverlay .vcontainer > div{
+  height:100%;
+}
